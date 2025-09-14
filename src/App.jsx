@@ -1,27 +1,25 @@
-import { useState } from 'react'
-import { BrowserRouter } from "react-router-dom";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link, Outlet } from "react-router-dom";
 import Header from "./header/header.jsx";
+import Home from "./home/home.jsx"
+import About from './about/about.jsx';
+import Contact from './contact/contact.jsx';
 import './App.css'
 
 const App = () => {
-    return <div>
-        <Header />
-        <Routes>
-            <Route path="/" element = {
-                <h1>Home</h1>
-                }/>
-            <Route path="/about" element = {
-                <h1>About</h1> 
-            } />
-            <Route path="*" element = {
-                <div>Ooops</div>
-            }/>
-            <Route path="/contact" element = {
-                <h1>Contact</h1>
-            }/>
-        </Routes>
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/about" element={<About />}/>
+
+        <Route path="/contact" element={<Contact />}/>
+
+        <Route path="*" element={<div>Ooops</div>} />
+      </Routes>
     </div>
+  );
 };
 
 export default App;

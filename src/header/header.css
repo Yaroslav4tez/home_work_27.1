@@ -1,0 +1,16 @@
+nav {
+  background-color: #f4f4f4;
+  padding: 10px;
+  padding-top: 70px;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: blue;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: darkred;
+}
